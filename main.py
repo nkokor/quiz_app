@@ -183,7 +183,6 @@ def hide_review(event):
     review_button.config(text='Review', cursor='hand2')
     review_button.bind('<Button-1>', review)
 
-
 def save_report(event):
     today = datetime.today()
     today = today.strftime("%B %d, %Y %H:%M:%S")
@@ -302,6 +301,7 @@ def finish():
 root = Tk()
 root.minsize(1000, 580)
 root.state('zoomed')
+root.resizable(False, False) 
 root.config(bg='white')
 root.title('Train Your Brain')
 root.iconbitmap('images/icon.ico')
@@ -320,6 +320,7 @@ def hide_bubble(event):
 
 
 def play_quiz(question_number):
+
     global good_luck_label
     global luck_label
     global greet_frame
